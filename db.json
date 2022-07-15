@@ -21,64 +21,9 @@
       "constelacion": "Andrómeda"
     },
     {
-      "id": 5,
       "nombre": "Ikki",
-      "constelacion": "Fenix"
-    },
-    {
-      "nombre": "asd",
-      "constelacion": "asdasd",
-      "id": 6
-    },
-    {
-      "nombre": "asd",
-      "constelacion": "asdsd",
-      "id": 7
-    },
-    {
-      "nombre": "asd",
-      "constelacion": "editando",
-      "id": 8
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "asdsd",
-      "id": 9
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "toto",
-      "id": 10
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "otro",
-      "id": 11
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "3",
-      "id": 12
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "4",
-      "id": 13
-    },
-    {
-      "nombre": "pepito",
-      "constelacion": "5",
-      "id": 14
-    },
-    {
-      "nombre": "asd",
-      "constelacion": "editando2",
-      "id": 15
-    },
-    {
-      "nombre": "asd",
-      "constelacion": "editando3",
-      "id": 16
+      "constelacion": "Fenix",
+      "id": 5
     }
   ],
   "dioses": [
