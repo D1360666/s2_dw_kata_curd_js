@@ -6,6 +6,9 @@ body {
    }
 
    .crud{
+    border-radius: 5px;
+    border-color: #333;
+    margin: 5px;
     background-color: aliceblue;
     opacity: 0.8;
     width: 30%;
@@ -25,6 +28,8 @@ body {
     text-shadow: 2px 2px chartreuse;
    }
 .text-box{
+    margin: 5px;
+    padding: 5px;
     border-radius: 10px;
     border-color: chartreuse;
     border-width: 2px;
@@ -68,4 +73,13 @@ body {
 .delete:hover{
     background-color: aliceblue;
     color: #c70101;
+}
+nav{
+    background-color: #333;
+    height: 50px;
+    width: 100%;
+    opacity: 0.8;
+}
+.nav{
+    color: aliceblue;
 }
