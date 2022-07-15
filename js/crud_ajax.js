@@ -16,8 +16,8 @@ const ajax = (options) => {
             let json = JSON.parse(xhr.responseText)
             success(json)
         }else{
-            let message = xhr.statusText || "Ocurrioun error"
-            error(`Error $(xhr.status): $(message`)
+            let message = xhr.statusText || "Ocurrio un error"
+            error(`Error ${xhr.status}: ${message}`)
         }
     })
     xhr.open(method||"GET", url);
@@ -44,8 +44,63 @@ const getAll= () => {
         },
         error:(error) => {
             console.log(err);
-            $table.insertAdjacentHTML("afterend", `<p><b>$(err)</b></p>`)
+            $table.insertAdjacentHTML("afterend", `<p><b>${err}</b></p>`)
         }
     })
 }
-d.addEventListener("DOMContentLoaded",getAll)
+d.addEventListener("DOMContentLoaded", getAll)
+
+d.addEventListener("submit", e => {
+    if(e.target === $form){
+        e.preventDefault()
+
+        if(!e.target.id.value){
+            //Create POST
+            ajax({
+                url: "http://localhost:5555/santos",
+                method: "POST",
+                success:(res) => location.reload(),
+                error:() => $form.insertAdjacentHTML("afterend",`<p><b>${err}</b></p>`),
+                data:{
+                    nombre: e.target.nombre.value,
+                    constelacion: e.target.constelacion.value
+                }
+            })
+        }else{
+            //Update - PUT
+            ajax({
+                url: `http://localhost:5555/santos/${e.target.id.value}`,
+                method: "PUT",
+                success: (res) => location.reload(),
+                error: () => $form.insertAdjacentHTML("afterend", `<p><b>${err}</b><p/>`),
+                data:{
+                    nombre: e.target.nombre.value,
+                    constelacion: e.target.constelacion.value
+                }
+            })
+        }
+    }
+})
+
+d.addEventListener("click", e=> {
+    if(e.target.matches(".edit")){
+        $title.textContent= "Editar Santo";
+        $form.nombre.value = e.target.dataset.name;
+        $form.constelacion.value = e.target. dataset.constelacion;
+        $form.id.value = e.target.dataset.id
+    }
+
+    if(e.target.matches(".delete")){
+        let isDelete = confirm(`¿EStás seguro de eliminar el id ${e.target.dataset.id}?`);
+
+        if(isDelete){
+            //Delete - DELETE
+            ajax({
+                url: `http://localhost:5555/santos/${e.target.dataset.id}`,
+                method: "DELETE",
+                success: (res) => location.reload(),
+                error: () => alert(err),
+            })
+        }
+    }
+})
