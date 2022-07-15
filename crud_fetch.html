@@ -5,8 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>CRUD API REST FETCH</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <!--<link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>-->
+    <!--<link rel='stylesheet' type='text/css' media='screen' href='main.css'>-->
+    
 </head>
 <body>
     <h1>CRUD API REST FETCH</h1>
@@ -19,7 +19,7 @@
                 <input type="text" name="constelacion" placeholder="Constelación" required>
                 <br>
                 <input type="submit" value="Enviar">
-                <input type="hidden" name="action">
+                <input type="hidden" name="id">
             </form>
         </article>
         <article>
@@ -48,14 +48,7 @@
             </td>
         </tr>
     </template>
-
-    <script>
-        const d = document
-        $table = d.querySelector(".crud-table")
-        $form = d.querySelector(".crud-form")
-        $title = d.querySelector(".crud-title")
-        $template = d.getElementById("crud-template").content
-        $fragment = d.createDocumentFragment();
-    </script>
+    <script src='js/crud_fetch.js'></script>
+   
 </body>
 </html>
