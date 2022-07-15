@@ -1,1 +1,5 @@
-"KATA CRUD REST API \n Primer commit: Creación de archivo crud_ajax.html y desarrollo del formulario" 
+KATA CRUD REST API
+Se emplean tres API Rest con diferentes herramientas.
+Ajax
+Fetch
+Axios.
